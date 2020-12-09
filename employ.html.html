@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js">
+</script>
+<link rel="stylesheet" type="text/css" href="html.css">
+</head>
+<body>
+<div class="container-fluid mt--7">
+<div class="row">
+<div class="col">
+  <div class="card shadow">
+    <div class="card-header bg-transparent">
+<div >
+    
+    
+    </div>
+    <div class="card-body">
+     <div class="container">
+      <form name="myformcont" class="my-2" action="" method="POST">
+    
+<h3>SKILLS</h3>
+
+        <div class="row jumbotron">
+
+        
+ <div class="col-sm-3 form-group" style="margin-top: -20px;">
+          <div class="container">
+    <div class="picture-container">
+        <div class="picture" style="height: 170px; width: 170px; margin-top: 25px;">
+      
+            <canvas id= "canv1" ></canvas>
+            <input type="file" multiple="false" accept="image/*" id=finput onchange="upload()">
+        </div>
+         <h6 class="">Choose Picture</h6>
+
+    </div>
+</div>
+          </div>
+          
+          
+          <div class="col-sm-9 form-group" style="margin-top: -20px;">
+            <label for="name">Name :</label>
+            <input type="text" class="form-control" name="name" id="name-f" placeholder=" Full Name." required><br>
+            <label for="email">Email:</label>
+            <input type="text" class="form-control" name="email" id="name-l" placeholder=" Email" required >
+          </div>
+         
+          <div class="col-sm-6 form-group">
+            <label for="Date">Phone No:</label>
+            <input type="text" name="dob" class="form-control" id="Date" placeholder=" Phone No." required>
+          </div>
+          <div class="col-sm-6 form-group">
+            <label for="e_group">Adhar no..</label>
+            <input type="text" class="form-control" name="contact" id="name-f" placeholder=" Adhar Number" required>
+          </div>
+          <div class="col-sm-6 form-group">
+            <label for="cost_center"> Pan Card</label>
+            <input type="text" class="form-control" name="address" id="cost_center" placeholder=" Pain Card Number" required>
+          </div>
+    
+      
+      <div class="col-sm-6 form-group">
+        <label for="bname">Gender</label>
+        <input type="text" class="form-control" name="policy_number" id="name-l" placeholder="  Gender " required>
+      </div>
+      <div class="col-sm-6 form-group">
+        <label for="Dname">DOB </label>
+        <input type="Date" class="form-control" name="premium" id="name-l" placeholder="DOB" required>
+      </div>
+
+      <div class="col-sm-6 form-group">
+        <label for="Payslip"> Blood Group</label>
+        <input type="text" class="form-control" name="sum_assured" id="address-1" placeholder=" Blood Group" required>
+      </div>
+      
+      
+      <div class="col-sm-6 form-group">
+        <label for="cc description">Father Name</label>
+        <input type="text" class="form-control" name="year_of_policy" id="description" placeholder=" Father Name" required>
+      </div>
+      <div class="col-sm-6 form-group">
+        <label for="pan_no"> Father Occoupation</label>
+        <input type="text" class="form-control" name="beneficiary_name" id="pan-no" placeholder=" Father Occoupation " required>
+      </div>
+      <div class="col-sm-6 form-group">
+        <label for="created_on">Father Number</label>
+        <input type="int" class="form-control" name="created_on" id="pan-no" placeholder=" Father Number" required>
+      </div>
+      
+      <div class="col-sm-6 form-group">
+        <label for="renew_date">City</label>
+        <input type="text" name="renew_date" class="form-control datetimepicker" id="Date" placeholder=" City" required>
+      </div>
+
+      <div class="col-sm-6 form-group">
+        <label for="renew_date">State</label>
+        <input type="text" name="renew_date"  class="form-control datetimepicker" id="Date" placeholder="State " required>
+      </div>
+      <div class="col-sm-6 form-group">
+        <label for="renew_date">Pincode</label>
+        <input type="text" name="renew_date"  class="form-control datetimepicker" id="Date" placeholder=" Pincode" required>
+      </div>
+        <div class="col-sm-12 form-group">
+        <label for="renew_date">Address</label>
+        <input type="text" name="renew_date"  class="form-control datetimepicker" id="Date" placeholder=" Address" required>
+      </div>
+
+      <div class="col-sm-12">
+        <input type="checkbox" class="form-check d-inline" id="chb" required><label for="chb" class="form-check-label">&nbsp;I accept all terms and conditions.
+        </label>
+      </div>
+
+      <div class="col-sm-12 form-group mb-0">
+       <button class="btn btn-primary float-right">Submit</button>
+     </div>
+     
+   </div>
+ </form>
+</div> 
+</div>
+</div>
+</div>
+</div>
+
+</body>
+<script type="text/javascript">
+  function upload(){
+  var imgcanvas = document.getElementById("canv1");
+  var fileinput = document.getElementById("finput");
+  var image = new SimpleImage(fileinput);
+  image.drawTo(imgcanvas);
+}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+// Prepare the preview for profile picture
+    $("#wizard-picture").change(function(){
+        readURL(this);
+    });
+});
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+</script>
+</html>
